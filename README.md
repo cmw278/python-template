@@ -12,8 +12,9 @@ Incorporates Travis-CI automated testing methodologies and borrows structure and
 ---
 
 #### TODO:
-- [ ] Add testing hooks to travis
-- [ ] Incorporate tox build system
+- [ ] Add pre-commit hooks to run autopep8 (`autopep8 -iraa .`)
+- [x] Add testing hooks to travis
+- [x] Incorporate tox build system
 - [x] Implement [PEP 517][517]
 ---
 
