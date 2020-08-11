@@ -19,6 +19,7 @@ Documentation/
 *.exe
 *.o
 *.so
+*.whl
 
 # Packages #
 ############

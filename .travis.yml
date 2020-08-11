@@ -25,8 +25,8 @@ script:
   # -riaa == --recursive --in-place --aggressive --aggressive
   # Using these flags, autopep will fix any style defects
   # before tests are appplied.
-  - pipenv run autopep8 -riaa ./src
-    pipenv run pycodestyle ./src
+  - pipenv run autopep8 -riaa .
+    pipenv run pycodestyle .
 
 notifications:
   email: false
