@@ -1,0 +1,32 @@
+# .travis.yml
+# https://config.travis-ci.com/
+# ---
+# This -ci config file appears to serve the purpose
+# for CI testing of a python development project.
+
+# for more information refer to
+# https://docs.travis-ci.com/user/languages/python/
+language: python
+python:
+  # python version(s) go here
+  #  "3.6"
+  #  "3.7"
+  - "3.8"
+
+install:
+  # pipenv is used to manage project dependencies.
+  # Use `pipenv install <PACKAGE>` to install a desired package.
+  - pip install pipenv
+    # pipenv install --dev installs all package dependencies,
+    # including development dependencies.
+    pipenv install --dev
+
+script:
+  # -riaa == --recursive --in-place --aggressive --aggressive
+  # Using these flags, autopep will fix any style defects
+  # before tests are appplied.
+  - pipenv run autopep8 -riaa ./src
+    pipenv run pycodestyle ./src
+
+notifications:
+  email: false
