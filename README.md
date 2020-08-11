@@ -56,6 +56,18 @@ def main():
 
 ```
 
+## Continuous Integration using Travis-CI
+This project template leverages Travis-CI's functionality to run integration tests each time a commit is pushed to GitHub. For this functionality to work from your own repos, you will need a Travis-CI account that is authorised with your GitHub. Once this is set up, Travis-CI will automatically build any commits that include a `.travis.yaml` file. This file is used to define the behaviour of the Travis-CI automated build system.
+
+More resources and documentation can be found on the [Travis-CI documentation website][travis-ci].
+
+## tox
+I won't go over tox in any detail, other than to say that it is used to manage build automation and testing within the Travis-CI environment. It can also be called locally during development by calling `tox` from the project directory.
+
+Further information is freely available [on the internet][tox].
+
+---
+
 [git]: https://github.com/cmw278/python-template
 [author]: https://github.com/cmw278/
 [build.svg]: https://travis-ci.com/cmw278/python-template.svg?branch=master "Travis-CI build status"
@@ -66,3 +78,5 @@ def main():
 
 [setup.cfg]: https://setuptools.readthedocs.io/en/latest/setuptools.html#id52 "The setuptools specification for a setup.cfg file"
 [pyproject.toml]: https://setuptools.readthedocs.io/en/latest/setuptools.html#id53 "The setuptools specification for a pyproject.toml file"
+[travis-ci]: https://docs.travis-ci.com/ "Travis-CI Documentation"
+[tox]: https://tox.readthedocs.io/en/latest/ "tox documentation"
