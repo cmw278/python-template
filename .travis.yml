@@ -9,7 +9,6 @@
 language: python
 python:
   # python version(s) go here
-  - "3.6"
   - "3.7"
   - "3.8"
 
