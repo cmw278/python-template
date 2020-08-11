@@ -9,24 +9,13 @@
 language: python
 python:
   # python version(s) go here
-  #  "3.6"
-  #  "3.7"
-  - "3.8"
+  - "3.6"
+    "3.7"
+    "3.8"
 
-install:
-  # pipenv is used to manage project dependencies.
-  # Use `pipenv install <PACKAGE>` to install a desired package.
-  - pip install pipenv
-    # pipenv install --dev installs all package dependencies,
-    # including development dependencies.
-  - pipenv install --dev
+install: pip install tox-travis
 
-script:
-  # -riaa == --recursive --in-place --aggressive --aggressive
-  # Using these flags, autopep will fix any style defects
-  # before tests are appplied.
-  - pipenv run autopep8 -riaa .
-    pipenv run pycodestyle .
+script: tox
 
 notifications:
   email: false

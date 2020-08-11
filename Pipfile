@@ -8,5 +8,6 @@ pylint = "*"
 autopep8 = "*"
 pycodestyle = "*"
 pytest = "*"
+tox = "*"
 
 [packages]
