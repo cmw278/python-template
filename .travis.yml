@@ -19,7 +19,7 @@ install:
   - pip install pipenv
     # pipenv install --dev installs all package dependencies,
     # including development dependencies.
-    pipenv install --dev
+  - pipenv install --dev
 
 script:
   # -riaa == --recursive --in-place --aggressive --aggressive
